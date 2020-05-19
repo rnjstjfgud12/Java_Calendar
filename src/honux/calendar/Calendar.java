@@ -18,15 +18,18 @@ public class Calendar {
 		System.out.println("22 23 24 25 26 27 28");
 	}
 	public static void main(String[] args) {
-		//입력받은 달의 최대 일 수 출력하기
-		
-		System.out.println("월을 입력하세요");
+		//입력받은 달의 최대 일 수 출력하기	
 		Scanner scanner = new Scanner(System.in);
 		Calendar cal = new Calendar();
-		int month = scanner.nextInt();
 		
+		System.out.println("반복 횟수를 입력하세요");
+		int repeat = scanner.nextInt();
 		
-		System.out.printf("%d월은 %d일까지 있습니다.", month, cal.getMaxDaysOfMonth(month));
+		for (int i = 0; i < repeat; i++) {
+			System.out.println("월을 입력하세요");
+			int month = scanner.nextInt();
+			System.out.printf("%d월은 %d일까지 있습니다.", month, cal.getMaxDaysOfMonth(month));
+		}
 		scanner.close();
 	}
 }
